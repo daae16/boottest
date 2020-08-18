@@ -10,12 +10,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.boot.service.UserService;
+import com.boot.service.impl.UserServiceImpl;
 import com.google.gson.Gson;
+
+
 
 @WebServlet("/ajax/user")
 public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Gson gson = new Gson();
+	private UserService userService = new UserServiceImpl();
 	
        
 
