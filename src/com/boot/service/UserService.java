@@ -1,11 +1,20 @@
 package com.boot.service;
 
-import java.util.Map;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import com.boot.vo.UserInfoVO;
+
 public interface UserService {
 	
-	public boolean doLogin (Map<String,String>param, HttpSession hs);
+	int insertUser(UserInfoVO user);
+	int deleteUser(UserInfoVO user, HttpSession hs);
+	int updateUser(UserInfoVO user, HttpSession hs);
+    UserInfoVO selectUser(UserInfoVO user);
+    boolean checkUserId (String uiId);
+    boolean doLogin (UserInfoVO user, HttpSession hs);
+    List<UserInfoVO> selectUserList(UserInfoVO user);
+	
 
 }

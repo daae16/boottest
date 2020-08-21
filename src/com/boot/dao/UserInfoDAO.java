@@ -1,10 +1,18 @@
 package com.boot.dao;
 
 import java.util.List;
-import java.util.Map;
+
+import com.boot.vo.UserInfoVO;
 
 public interface UserInfoDAO {
 	
-	public Map<String,String> selectUserInfoByIdAndPwd(Map<String,String> user);
+	int insertUser(UserInfoVO user);
+	int deleteUser(UserInfoVO user);
+	int updateUser(UserInfoVO user);
+    UserInfoVO selectUser(UserInfoVO user);
+    UserInfoVO selectUserById(String uiId);
+    UserInfoVO selectUserForLogin (UserInfoVO user);
+    List<UserInfoVO> selectUserList(UserInfoVO user);
+	
 
 }
