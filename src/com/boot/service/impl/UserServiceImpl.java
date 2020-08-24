@@ -44,12 +44,13 @@ public class UserServiceImpl implements UserService {
 	}
 
 	public UserInfoVO selectUserForLogin(UserInfoVO user) {
+		
 		return null;
 	}
 
 	@Override
 	public List<UserInfoVO> selectUserList(UserInfoVO user) {
-		return null;
+		return udao.selectUserList(user); 
 	}
 	
 	@Override
@@ -57,7 +58,7 @@ public class UserServiceImpl implements UserService {
 		UserInfoVO user1 = udao.selectUserById(uiId);
 		if(user1==null) {
 			return true;
-		}
+		}  
 		return false;
 	}
 
